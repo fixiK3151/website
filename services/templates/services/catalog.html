@@ -1,0 +1,76 @@
+{% extends 'mysite/base.html' %}
+{% load static %}
+{% load service_tags %}
+
+{% block css %} 
+
+    <link rel="stylesheet" href="{% static 'services/css/catalog_page.css' %}">
+
+    {% comment %} <link rel="stylesheet" href="https://cdn.j.sdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'mysite/css/start_page.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mysite/css/awesome/css/all.css' %}">
+
+{% endblock %}
+
+
+{% block content %} 
+
+
+   <!--Модальное окно-->
+   <div class="modal" id="modal">
+
+    <div class="modal-content" id="modal-content">
+        <div class="modal-close" id="modal-close">&#10006</div>
+
+        <h3>Заявка на подключение</h3>
+
+        <form id="requestForm" action="">
+            <input type="text" id='firstName' placeholder='Имя'>
+            <input type="text" id='lastName' placeholder='Фамилия'>
+            <input type="text" id='mobile' placeholder='Номер телефона'>
+            <input type="text" id='address' placeholder='Адрес'>
+                
+            <button type="submit">Оставить заявку</button>
+        </form>
+
+            
+    </div>
+</div>
+
+
+<!-- Тарифные планы-->
+<div class='container'>
+
+    <h1 class='heading'> Выбери свой тариф </h1>
+
+    <div class = 'box-container'>
+        
+        <!-- Отсылка к DOOM'у :) -->
+
+        {% tag_services as services %}
+        {% for service in services %}
+
+            <div class="box">
+                <img src="{% static 'services/images/home-internet.jpg' %}" alt=''>
+                <h3> {{ service.name }} </h3>
+                <p> {{ service.description }} </p>
+                <button class="button" tarifnumber="{{service.tarifexternalname}}" id="button{{forloop.counter}}"> Подключить </button>
+            </div>
+    
+        {% endfor %}
+            
+    </div> 
+</div>
+
+
+{% endblock %}
+
+{% block scripts %} 
+    
+    <script src="{% static 'services/js/main.js' %}" async defer></script>
+
+{% endblock %}
+
+        
+

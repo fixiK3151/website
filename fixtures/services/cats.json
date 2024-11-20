@@ -1,0 +1,10 @@
+[
+    {
+        "model": "services.categories",
+        "pk": 1,
+        "fields": {
+            "name": "Домашний интернет",
+            "slug": "domashnij-internet"
+        }
+    }
+]

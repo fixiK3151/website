@@ -1,0 +1,77 @@
+{% comment %} {% extends 'mysite/base.html' %} {% endcomment %}
+{% load static %}
+
+
+<head>
+    <title>{{ title }}</title>
+</head>
+
+
+{% block css %} 
+
+<link rel="stylesheet" href="{% static 'mysite/css/registration_page.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+		<div class="main">
+			<a href="{%url 'mysite:start-page' %}" style="text-decoration: none;"><img src = "{% static 'mysite/images/hive_logo.svg' %}">
+			<span class="logo">fixiK</span></a>
+			<h3>Регистрация</h3>
+			<form action="">
+				
+				<input type="text"
+					   id="name"
+					   name="firstname"
+					   placeholder="Имя" required>
+
+				
+				<input type="text"
+					   id="lastname"
+					   name="lastname"
+					   placeholder="Фамилия" required>
+
+
+				<input type="text"
+					   id="mobile"
+					   name="mobile"
+					   maxlength="10"
+					   placeholder="Номер телефона" required>
+
+
+				<input type="email"
+					   id="email"
+					   name="email"
+					   placeholder="Email" required>
+
+
+				<input type="text"
+						id="login"
+						name="login"
+						placeholder="Логин" required>
+
+
+				<input type="password"
+					   id="password"
+					   name="password"
+					   pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+					   title="Пароль должен содержать как минимум одну цифру, одну букву алфавита, один символ и быть длиной не менее 8 символов."
+					   placeholder="Пароль" required>
+
+				<input type="password"
+					   id="repassword"
+					   name="repassword"
+					   placeholder="Повторите пароль" required>
+
+				
+				<div class="wrap">
+					<button type="submit">
+						Создать аккаунт
+					</button>
+				</div>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,165 @@
+/* * {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Модальное окно */
+
+
+.modal{
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    margin: 15% auto;
+    background-color: #fefefe;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #393636;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    color: #333
+}
+
+.modal-close{
+    color: #aaa;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display:block;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.modal button {
+    margin-top: 8px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.modal button:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: all .6s ease;
+}
+
+
+.modal h3{
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* Контейнеры */
+
+.container {
+    padding: 15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.container .box-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+.container .box-container .box img{
+    height: 120px;
+}
+
+
+.container .box-container .box h3{
+    color: #444;
+    font-size: 15px;
+    padding: 5px 0;
+}
+ 
+
+.container .box-container .box p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.container .box-container .box .button{
+    margin-top: 10px;
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.container .box-container .box .button:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+    transition: all .6s ease;
+}
+
+
+@media(max-width:768px)
+{
+    .container{
+        padding: 20px;
+    }
+}

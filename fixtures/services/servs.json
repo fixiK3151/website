@@ -1,0 +1,50 @@
+[
+    {
+        "model": "services.services",
+        "pk": 1,
+        "fields": {
+            "name": "Мне рано интернет",
+            "tarifexternalname": "internet_1",
+            "slug": "mne-rano-internet",
+            "description": "100мбит/с - 450руб/мес",
+            "price": "450.00",
+            "category": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 2,
+        "fields": {
+            "name": "Сделай мне интернет",
+            "tarifexternalname": "internet_2",
+            "slug": "sdelaj-mne-internet",
+            "description": "200мбит/с - 600руб/мес",
+            "price": "600.00",
+            "category": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 3,
+        "fields": {
+            "name": "Ультра интернет",
+            "tarifexternalname": "internet_3",
+            "slug": "ultra-internet",
+            "description": "500мбит/с - 850руб/мес",
+            "price": "850.00",
+            "category": 1
+        }
+    },
+    {
+        "model": "services.services",
+        "pk": 4,
+        "fields": {
+            "name": "Кошмарный интернет",
+            "tarifexternalname": "internet_4",
+            "slug": "koshmarnyj-internet",
+            "description": "1Гбит/с - 1250руб/мес",
+            "price": "1250.00",
+            "category": 1
+        }
+    }
+]
